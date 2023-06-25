@@ -1,7 +1,8 @@
 # CS-230_Operating_Platforms
 
 ### _"Briefly summarize The Gaming Room client and their software requirements. Who was the client? What type of software did they want you to design?"_
-There is already an Android app called "Draw It or Lose It" from the developers, The Gaming Room. Based on the present game, they want to adapt their web-based game to support various platforms. The program is made up of numerous games that each include multiple teams with multiple players. Each game and team name must be unique for the game to operate correctly. Draw It or Lose It has a vast stock of drawings to call upon for the facilitation of its gameplay. The Gaming Room's staff has no idea how to set up an environment to facilitate gameplay on non-android platforms.
+
+The developers at The Gaming Room have already released the Android app "Draw It or Lose It," which poses a new challenge for memory and storage management. The game includes a library of 200 images, each with a size of 8 megabytes, resulting in a total of 1.6 gigabytes of image data. Given the high-definition nature of the game, proper memory and storage management are crucial. Loading all 200 images simultaneously can strain the game's performance, particularly on less powerful hardware. To optimize the game's speed and efficiency, a more effective approach is to load images dynamically. This entails loading images in batches or quick succession based on user progress, the current round, or other immediate requirements. By loading images on-demand, the game can run smoothly while conserving memory resources. Originally focused on developing mobile app games, The Gaming Room received positive feedback for their Android puzzle competition game. In response to customer demand, they aim to create a web-based version of their existing Android app, ensuring that the game can be enjoyed on a wide range of platforms and devices.
 
 Design Constraints:
 *	Android, iOS, and web platforms each have different tools and capabilities/requirements.
@@ -12,7 +13,7 @@ Design Constraints:
 *	Game and team names must be unique to allow users to check whether a name is in use when choosing a team name.
 *	Only one instance of the game can exist in memory at any given time. This can be accomplished by creating unique identifiers for each instance of a game, team, or player.
 
-In relation to their game, Draw It or Lose It, you have been asked to:
+In relation to their game, Draw It or Lose It, at one point I was asked to:
 
 - Explain the operating system architectures for different operating systems.
 - Analyze the differential file system components that represent a collection of data.
@@ -20,19 +21,21 @@ In relation to their game, Draw It or Lose It, you have been asked to:
 - Identify memory management techniques.
 - Describe distributed systems and the networks that interconnect them.
 
-In the case of Draw It or Lose It, the memory is used to store 200 images. Each image is 8 megabytes in size, so that means we have 1600 megabytes, or 1.6 gigabytes, worth of images that need proper memory and storage management. Draw It or Lose It is a game that requires rendering and displaying high-definition image files. For the game to function, a large number of images must be loaded into memory. The game may run slowly if all 200 image files are loaded at once, especially on less powerful hardware. A better approach is to load images dynamically, only loading the images that are needed at the moment. This can be done by loading images in batches or quick succession, based on the user's progress, depending on the round, or if there are some other immediate requirements. 
+
 
 ### _"What did you do particularly well in developing this documentation?"_
 
+In my detailed recommendation section, I covered essential aspects for the client's consideration, providing valuable insights. These areas included the selection of a suitable host operating system (OS), effective memory and storage management solutions on host servers, the importance of an appropriate API framework, the significance of implementing robust security measures, and the numerous benefits associated with leveraging serverless architecture to successfully launch the product. I presented a compelling argument highlighting why a cloud platform would be the optimal choice to fulfill the client's objectives.
 
 ### _"What about the process of working through a design document did you find helpful when developing the code?"_
-
+Analyzing the domain model as a UML class diagram aided in understanding the structure and relationships of entities representing app components. This aided in the development of compact classes with basic methods that directly utilized other things to construct a clean prototype.
 
 ### _"If you could choose one part of your work on these documents to revise, what would you pick? How would you improve it?"_
-
+Having better documentation and in-line comments within the code of my work. Some of the comment's didn't explain what I had done in an effective manner.
 
 ### _"How did you interpret the user’s needs and implement them into your software design? Why is it so important to consider the user’s needs when designing?"_
-
+It is critical to focus the user's core demands while designing web-based apps, which generally center around speed and intuitiveness in terms of usability. While quality features such as the app's design and feel are crucial, speed and usability take precedence. Even if a user is not totally delighted with the appearance of an app, they will quickly quit it if the functionality is confusing or it runs poorly. The demands of the user should be prioritized because they are the ultimate source of money for the client, making their happiness critical to the product's success.
 
 ### _"How did you approach designing software? What techniques or strategies would you use in the future to analyze and design a similar software application?"_
 
+It is good to begin with a broad understanding and subsequently refine it to obtain precision while building software. Starting with high-level goals and iterating through many stages to arrive at the ultimate answer. For example, a client's business objectives might be broken down into functional requirements, which explain the core features required to fulfill those goals. These functional requirements can then be subdivided into technical requirements, which outline the technological method needed to achieve the functional needs. Finally, the technical requirements may be converted into design papers, architecture, and code, yielding a solution that meets the criteria while also delivering the end product.
